@@ -28,4 +28,14 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Volume {
             System.out.println("RAGGIUNTO VOLUME MINIMO");
         }
     }
+
+    public void play() {
+        String sequenzaEsclamativa = "";
+        for (int i = 0; i < volume; i++) {
+            sequenzaEsclamativa += "!";
+        }
+        for (int i = 0; i < durata; i++) {
+            System.out.println(titolo + " " + "volume=" + " " + sequenzaEsclamativa);
+        }
+    }
 }

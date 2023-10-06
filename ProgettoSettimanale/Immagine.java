@@ -7,6 +7,15 @@ public class Immagine extends ElementoMultimediale implements Luminosita {
         super(_titolo);
     }
 
+    public void show() {
+        String sequenzaAsterisco = "";
+        for (int i = 0; i < luminonsita; i++) {
+            sequenzaAsterisco += "*";
+        }
+        System.out.println(titolo + " " + "luminosità=" + " " + sequenzaAsterisco);
+
+    }
+
     @Override
     public void alzaLuminosita() {
         if (luminonsita < MAXLUMINOSITA) {
@@ -26,4 +35,6 @@ public class Immagine extends ElementoMultimediale implements Luminosita {
             System.out.println("RAGGIUNTA LUMINOSITÀ MINIMA");
         }
     }
+
+
 }
