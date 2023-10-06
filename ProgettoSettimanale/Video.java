@@ -20,9 +20,28 @@ public class Video extends ElementoMultimediale implements Volume, Luminosita {
         }
     }
 
+    public void play() {
+        String sequenzaEsclamativa = "";
+        for (int i = 0; i < volume; i++) {
+            sequenzaEsclamativa += "!";
+        }
+        String sequenzaAsterisco = "";
+        for (int i = 0; i < luminonsita; i++) {
+            sequenzaAsterisco += "*";
+        }
+        for (int i = 0; i < durata; i++) {
+            System.out.println(titolo + " " + "volume=" + " " + sequenzaEsclamativa + " " + "luminosità=" + " " + sequenzaAsterisco);
+        }
+    }
+
     @Override
     public void abbassaLuminosita() {
-
+        if (luminonsita > MINLUMINOSITA) {
+            luminonsita--;
+            System.out.println("luminosità:" + luminonsita);
+        } else {
+            System.out.println("RAGGIUNTA LUMINOSITÀ MINIMA");
+        }
     }
 
     @Override
